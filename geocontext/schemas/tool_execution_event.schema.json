@@ -1,0 +1,338 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forest-cover-lab.example/schemas/tool-execution-event-1.0.json",
+  "title": "Candidate observed tool execution event 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "call_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tool_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "implementation_version_or_commit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agent_instance_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "availability": {
+      "const": "available"
+    },
+    "availability_observation_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "invocation_observation_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timing": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "measurement": {
+              "const": "measured"
+            },
+            "started_utc": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            "ended_utc": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            "elapsed_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "measurement",
+            "started_utc",
+            "ended_utc",
+            "elapsed_ms"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "measurement": {
+              "const": "not_measured"
+            },
+            "started_utc": {
+              "type": "null"
+            },
+            "ended_utc": {
+              "type": "null"
+            },
+            "elapsed_ms": {
+              "type": "null"
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "measurement",
+            "started_utc",
+            "ended_utc",
+            "elapsed_ms",
+            "reason"
+          ]
+        }
+      ]
+    },
+    "parameters": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "canonical_payload"
+            },
+            "canonicalization": {
+              "type": "string",
+              "minLength": 1
+            },
+            "payload": {
+              "type": "object"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "kind",
+            "canonicalization",
+            "payload",
+            "sha256"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "retained_input_hash"
+            },
+            "canonicalization": {
+              "type": "string",
+              "minLength": 1
+            },
+            "retained_input_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "kind",
+            "canonicalization",
+            "retained_input_ref",
+            "sha256"
+          ]
+        }
+      ]
+    },
+    "mode": {
+      "enum": [
+        "live",
+        "cached",
+        "offline_fixture"
+      ]
+    },
+    "cache_or_fixture_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "request_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "response_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "raw_response_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "outcome": {
+      "enum": [
+        "success",
+        "error"
+      ]
+    },
+    "error": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "provenance_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "call_id",
+    "tool_id",
+    "implementation_version_or_commit",
+    "agent_instance_id",
+    "source_ids",
+    "availability",
+    "availability_observation_ref",
+    "invocation_observation_ref",
+    "timing",
+    "parameters",
+    "mode",
+    "cache_or_fixture_ref",
+    "request_sha256",
+    "response_sha256",
+    "raw_response_ref",
+    "outcome",
+    "error",
+    "provenance_refs",
+    "limitations"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "enum": [
+              "cached",
+              "offline_fixture"
+            ]
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "properties": {
+          "cache_or_fixture_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "success"
+          }
+        },
+        "required": [
+          "outcome"
+        ]
+      },
+      "then": {
+        "properties": {
+          "response_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "raw_response_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "error": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "error"
+          }
+        },
+        "required": [
+          "outcome"
+        ]
+      },
+      "then": {
+        "properties": {
+          "error": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

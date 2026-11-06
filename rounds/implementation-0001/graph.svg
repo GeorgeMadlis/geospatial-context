@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1246" height="932" viewBox="0 0 1246 932" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" role="img">
+<title>Agent graph for round geospatial-context-implementation-draft-0001</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9z" fill="#5F5E5A"/></marker></defs>
+<rect width="1246" height="932" fill="#FFFFFF"/>
+<text x="28" y="34" font-size="13" font-weight="bold" fill="#2C2C2A">Agent graph · geospatial-context-implementation-draft-0001</text>
+<text x="28" y="54" font-size="11" fill="#444441">mode: stepwise · graph approval: approved by operator (chat user) · round status: active</text>
+<text x="28" y="70" font-size="11" fill="#5F5E5A">proposed by: Codex planning session</text>
+<path d="M222.0 174.0 C222.0 197.5 222.0 197.5 222.0 219.0" fill="none" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arr)"/>
+<path d="M222.0 303.0 C222.0 326.5 222.0 326.5 222.0 348.0" fill="none" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arr)"/>
+<path d="M222.0 432.0 C222.0 455.5 222.0 455.5 222.0 477.0" fill="none" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arr)"/>
+<path d="M222.0 561.0 C222.0 584.5 222.0 584.5 222.0 606.0" fill="none" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arr)"/>
+<path d="M222.0 690.0 C222.0 713.5 222.0 713.5 222.0 735.0" fill="none" stroke="#5F5E5A" stroke-width="1.2" marker-end="url(#arr)"/>
+<rect x="96.0" y="92.0" width="252.0" height="82" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.2" stroke-dasharray="5 3"/>
+<text x="222.0" y="123.0" font-size="13" font-weight="bold" fill="#0C447C" text-anchor="middle">Brief and historical records</text>
+<text x="222.0" y="141.0" font-size="11" fill="#185FA5" text-anchor="middle">input artifacts</text>
+<text x="222.0" y="156.0" font-size="11" font-style="italic" fill="#185FA5" text-anchor="middle">declared</text>
+<rect x="112.0" y="221.0" width="220.0" height="82" rx="22" fill="#FAEEDA" stroke="#854F0B" stroke-width="2"/>
+<text x="222.0" y="252.0" font-size="13" font-weight="bold" fill="#633806" text-anchor="middle">Approve scope and access</text>
+<text x="222.0" y="270.0" font-size="11" fill="#854F0B" text-anchor="middle">human approval gate</text>
+<text x="222.0" y="285.0" font-size="11" font-style="italic" fill="#854F0B" text-anchor="middle">approved</text>
+<rect x="87.6" y="350.0" width="268.8" height="82" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2" stroke-dasharray="5 3"/>
+<text x="222.0" y="373.5" font-size="13" font-weight="bold" fill="#085041" text-anchor="middle">implement-01</text>
+<text x="222.0" y="391.5" font-size="11" fill="#0F6E56" text-anchor="middle">codex</text>
+<text x="222.0" y="406.5" font-size="11" fill="#0F6E56" text-anchor="middle">national-geospatial-evidence</text>
+<text x="222.0" y="421.5" font-size="11" font-style="italic" fill="#0F6E56" text-anchor="middle">started · 1 attempt · single attempt</text>
+<rect x="28.0" y="479.0" width="388.0" height="82" rx="22" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.2" stroke-dasharray="5 3"/>
+<text x="222.0" y="510.0" font-size="13" font-weight="bold" fill="#633806" text-anchor="middle">Review implementation and authorize challenge</text>
+<text x="222.0" y="528.0" font-size="11" fill="#854F0B" text-anchor="middle">human approval gate</text>
+<text x="222.0" y="543.0" font-size="11" font-style="italic" fill="#854F0B" text-anchor="middle">pending</text>
+<rect x="128.4" y="608.0" width="187.2" height="82" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2" stroke-dasharray="5 3"/>
+<text x="222.0" y="631.5" font-size="13" font-weight="bold" fill="#085041" text-anchor="middle">challenge-01</text>
+<text x="222.0" y="649.5" font-size="11" fill="#0F6E56" text-anchor="middle">codex</text>
+<text x="222.0" y="664.5" font-size="11" fill="#0F6E56" text-anchor="middle">independent-challenge</text>
+<text x="222.0" y="679.5" font-size="11" font-style="italic" fill="#0F6E56" text-anchor="middle">planned · single attempt</text>
+<rect x="96.0" y="737.0" width="252.0" height="82" rx="22" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.2" stroke-dasharray="5 3"/>
+<text x="222.0" y="768.0" font-size="13" font-weight="bold" fill="#633806" text-anchor="middle">Review challenge and results</text>
+<text x="222.0" y="786.0" font-size="11" fill="#854F0B" text-anchor="middle">human approval gate</text>
+<text x="222.0" y="801.0" font-size="11" font-style="italic" fill="#854F0B" text-anchor="middle">pending</text>
+<rect x="193.2" y="180.0" width="57.6" height="17.0" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="222.0" y="190.0" font-size="10" fill="#444441" text-anchor="middle">baseline</text>
+<rect x="193.2" y="309.0" width="57.6" height="17.0" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="222.0" y="319.0" font-size="10" fill="#444441" text-anchor="middle">baseline</text>
+<rect x="152.9" y="438.0" width="138.2" height="17.0" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="222.0" y="448.0" font-size="10" fill="#444441" text-anchor="middle">implementation_report</text>
+<rect x="152.9" y="567.0" width="138.2" height="17.0" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="222.0" y="577.0" font-size="10" fill="#444441" text-anchor="middle">implementation_report</text>
+<rect x="168.4" y="696.0" width="107.2" height="17.0" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="222.0" y="706.0" font-size="10" fill="#444441" text-anchor="middle">challenge_report</text>
+<rect x="28" y="860" width="14" height="12" rx="2" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="48" y="870" font-size="11" fill="#444441">input</text>
+<rect x="96.0" y="860" width="14" height="12" rx="2" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="116.0" y="870" font-size="11" fill="#444441">agent</text>
+<rect x="164.0" y="860" width="14" height="12" rx="2" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="184.0" y="870" font-size="11" fill="#444441">script</text>
+<rect x="238.8" y="860" width="14" height="12" rx="2" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="258.8" y="870" font-size="11" fill="#444441">human gate</text>
+<rect x="340.8" y="860" width="14" height="12" rx="2" fill="none" stroke="#7F77DD" stroke-dasharray="3 2"/>
+<text x="360.8" y="870" font-size="11" fill="#444441">independence group</text>
+<text x="503.2" y="870" font-size="11" fill="#444441">dashed border = not yet done · solid = completed/approved · red = failed/blocked/rejected</text>
+<text x="28" y="890" font-size="11" fill="#444441">Arrows are labelled with the artifacts they carry. No path may link members of an independence group. Manual hand-off hosts (chatgpt, claude) are not invoked programmatically.</text>
+<text x="28" y="908" font-size="11" font-weight="bold" fill="#633806">Status is read from the round record; it does not prove what a host actually did. Generated by agent_harness/scripts/render_round_graph.py; do not edit.</text>
+</svg>

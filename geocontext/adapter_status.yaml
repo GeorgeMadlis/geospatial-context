@@ -1,0 +1,27 @@
+version: '0.1'
+adapters:
+  local-geojson:
+    implemented: true
+    tested: true
+    observed_provider_query: false
+    limitations: local files only; no live query or source coverage assessment
+  wfs-capabilities-parser:
+    implemented: true
+    tested: true
+    observed_provider_query: false
+    limitations: parses retained capabilities; live WFS not implemented
+  wms-capabilities-parser:
+    implemented: true
+    tested: true
+    observed_provider_query: false
+    limitations: parses retained capabilities; GetMap not implemented
+  arcgis-metadata-parser:
+    implemented: true
+    tested: true
+    observed_provider_query: false
+    limitations: parses retained metadata; live ArcGIS not implemented
+  page610-listing-parser:
+    implemented: true
+    tested: true
+    observed_provider_query: false
+    limitations: retained HTML only; date ranges and year-only observations omitted

@@ -1,0 +1,248 @@
+schema_version: '1.1'
+round_id: geospatial-context-implementation-draft-0001
+kind: research
+status: active
+created_utc: '2026-11-06T07:52:28Z'
+question: Can a read-only contextual evidence library reproduce approved historical
+  retrievals with inspectable provenance and without causal verdicts?
+frame:
+  aoi_ref: 'UNSET: new case geometry requires operator source; historical ROI only
+    for replay'
+  period: Historical replay 2026-10-24; new case period unset
+  measurement: Estonian linear geometry and dated source provenance; area under ADR
+    0003
+  competing_hypotheses:
+  - power-line corridor
+  - road
+  - rail
+  - other clearing
+  - imagery or registration artifact
+repos:
+  forest_cover_lab: dfd1cf4a174d7b9918db12b986faa24d407dce0d
+  sentinel_monthly_forest_cover: bb1b51437a4df274c5bca2c4a66b742c2ef21a93
+  lab_graph_revision: f45d61d534724ecbb3461df85e3d9cf097b177e1739906ccce561c7ac2c3446f
+instances:
+- id: implement-01
+  role: agent_harness/roles/national-geospatial-evidence.md
+  host_planned: codex
+  selection_status: started
+  assignment: assignments/implement-01.md
+  delegation:
+    mode: sequential_role
+    parent_instance_id: null
+    question: Implement the approved offline library and replay, using exact source
+      and storage scope approved by operator. Preserve round-0003. Produce tests and
+      provenance; no live calls without separate approval.
+    output_contract: Reviewable report and evidence; no scientific promotion
+    permitted_writes:
+    - Only separately approved step scope
+    budget:
+      tool_call_limit: null
+      elapsed_seconds_limit: null
+      cost_usd_limit: null
+  harness_sources:
+  - source: forest-cover-lab
+    path_or_identifier: agent_harness/roles/national-geospatial-evidence.md
+    revision: dfd1cf4a174d7b9918db12b986faa24d407dce0d
+    sha256: null
+    capture_status: selected
+  - source: round
+    path_or_identifier: assignments/implement-01.md
+    revision: null
+    sha256: null
+    capture_status: selected
+  actual_executions:
+  - attempt_id: implement-01-attempt-001
+    host: codex
+    started_utc: '2026-11-06T08:51:07Z'
+    ended_utc: null
+    status: running
+    model_if_known: null
+    loaded_harness:
+    - source: forest-cover-lab
+      path_or_identifier: agent_harness/roles/national-geospatial-evidence.md
+      revision: dfd1cf4a174d7b9918db12b986faa24d407dce0d
+      sha256: 146f230a7f80ca5f56659db0a8c66409fbf12931295571b94e7294b80b7533a8
+      capture_status: captured
+    - source: round
+      path_or_identifier: assignments/implement-01.md
+      revision: null
+      sha256: 2dc8410833aede2fd09902c2df23926baaeea41808eb886723c4ecd645e1ac98
+      capture_status: captured
+    - source: round
+      path_or_identifier: step_plans/implement-01.md
+      revision: null
+      sha256: d22621aec9afb36d9b91a70f28d9e5240860795e211f45895438d115c979da7e
+      capture_status: captured
+    - source: forest-cover-lab
+      path_or_identifier: AGENTS.md
+      revision: dfd1cf4a174d7b9918db12b986faa24d407dce0d
+      sha256: 6cf2a9e0c6fec2e2b7a2a59a28d2e479f2ba05c99c3817b0d7328661f244098a
+      capture_status: captured
+    - source: forest-cover-lab
+      path_or_identifier: docs/agents.md
+      revision: dfd1cf4a174d7b9918db12b986faa24d407dce0d
+      sha256: c71de1f55d7ef4b563d38d65860f987e3ba605412ef4520034ed1dd9895f254d
+      capture_status: captured
+    prompt_ref: null
+    tool_access:
+    - Local filesystem and Python via Codex shell; no provider HTTP calls.
+    source_refs: []
+    output_refs: []
+    checks: []
+    limitations:
+    - This record starts at the explicitly observed time; prior prototype work occurred
+      earlier and is not represented as this attempt.
+    - Client version and model configuration unavailable; assignment file retains
+      its original pending text, superseded by the operator approval recorded in the
+      graph.
+    - docs/agents.md was opened after this attempt record started; AGENTS.md was loaded
+      before it.
+    runtime:
+      client_version: null
+      model_configuration: {}
+      context_mode: inherited
+      workspace_mode: shared
+      permission_summary: Local workspace writes and read-only offline historical
+        data; live provider access disabled.
+    handoffs: []
+    independence:
+      source_lineage_groups: []
+      conclusion_exposure: received
+      evidence_inspected: []
+      limitations:
+      - Implementation has seen prior summaries and is not an independent challenge.
+    coordination_events: []
+- id: challenge-01
+  role: agent_harness/roles/independent-challenge.md
+  host_planned: codex
+  selection_status: planned
+  assignment: assignments/challenge-01.md
+  delegation:
+    mode: separate_session
+    parent_instance_id: null
+    question: Independently inspect original evidence, implementation, tests, licence
+      and scope gaps. Challenge date inference, geometry, source lineage and reproducibility;
+      report unresolved findings. No self approval.
+    output_contract: Reviewable report and evidence; no scientific promotion
+    permitted_writes:
+    - Only separately approved step scope
+    budget:
+      tool_call_limit: null
+      elapsed_seconds_limit: null
+      cost_usd_limit: null
+  harness_sources:
+  - source: forest-cover-lab
+    path_or_identifier: agent_harness/roles/independent-challenge.md
+    revision: dfd1cf4a174d7b9918db12b986faa24d407dce0d
+    sha256: null
+    capture_status: selected
+  - source: round
+    path_or_identifier: assignments/challenge-01.md
+    revision: null
+    sha256: null
+    capture_status: selected
+  actual_executions: []
+graph:
+  mode: stepwise
+  approval:
+    proposed_by: Codex planning session
+    planning_record_id: geospatial-context-implementation-draft-0001/graph
+    status: approved
+    approver: operator (chat user)
+    decided_utc: '2026-11-06T08:36:33Z'
+    basis: Operator approved the proposed graph, offline implementation and each proposed
+      step plan in chat; this timestamp records transcription, not the unavailable
+      exact message time. Later review gates remain pending.
+  nodes:
+  - id: baseline
+    kind: input
+    label: Brief and historical records
+    outputs:
+    - baseline
+  - id: scope-review
+    kind: gate
+    label: Approve scope and access
+    approver: human
+    approval:
+      status: approved
+      approver: operator (chat user)
+      decided_utc: '2026-11-06T08:36:33Z'
+      basis: Operator approved the proposed graph, offline implementation and each
+        proposed step plan in chat; this timestamp records transcription, not the
+        unavailable exact message time. Later review gates remain pending.
+  - id: implement-01
+    kind: agent
+    instance: implement-01
+    outputs:
+    - implementation_report
+    step_plan:
+      plan_ref: step_plans/implement-01.md
+      plan_sha256: d22621aec9afb36d9b91a70f28d9e5240860795e211f45895438d115c979da7e
+      approval:
+        status: approved
+        approver: operator (chat user)
+        decided_utc: '2026-11-06T08:36:33Z'
+        basis: Operator approved the proposed graph, offline implementation and each
+          proposed step plan in chat; this timestamp records transcription, not the
+          unavailable exact message time. Later review gates remain pending.
+  - id: implementation-review
+    kind: gate
+    label: Review implementation and authorize challenge
+    approver: human
+    approval:
+      status: pending
+      approver: null
+      decided_utc: null
+      basis: null
+  - id: challenge-01
+    kind: agent
+    instance: challenge-01
+    outputs:
+    - challenge_report
+    step_plan:
+      plan_ref: step_plans/challenge-01.md
+      plan_sha256: 3a6da507c9fae0102eb35f75f4e97f56806d0541a03dd09c2f51e4bf7a2f3916
+      approval:
+        status: approved
+        approver: operator (chat user)
+        decided_utc: '2026-11-06T08:36:33Z'
+        basis: Operator approved the proposed graph, offline implementation and each
+          proposed step plan in chat; this timestamp records transcription, not the
+          unavailable exact message time. Later review gates remain pending.
+  - id: final-review
+    kind: gate
+    label: Review challenge and results
+    approver: human
+    approval:
+      status: pending
+      approver: null
+      decided_utc: null
+      basis: null
+  edges:
+  - from: baseline
+    to: scope-review
+    carries:
+    - baseline
+  - from: scope-review
+    to: implement-01
+    carries:
+    - baseline
+  - from: implement-01
+    to: implementation-review
+    carries:
+    - implementation_report
+  - from: implementation-review
+    to: challenge-01
+    carries:
+    - implementation_report
+  - from: challenge-01
+    to: final-review
+    carries:
+    - challenge_report
+  independence_groups: []
+human_review:
+  status: pending
+  reviewer: null
+  decision: null
+  basis: null

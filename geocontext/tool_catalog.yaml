@@ -1,0 +1,9 @@
+version: '0.1'
+tools:
+  list-sources: {implemented: true, tested: true, observed_invocation: ledger_only}
+  describe-layer: {implemented: true, tested: true, observed_invocation: ledger_only}
+  query-layer: {implemented: true, tested: true, observed_invocation: ledger_only, limitation: offline local GeoJSON only}
+  orthophoto-dates: {implemented: true, tested: true, observed_invocation: ledger_only, limitation: offline listing filenames only}
+  measure: {implemented: true, tested: true, observed_invocation: ledger_only, limitation: simplified reference bearing}
+  show-tool-ledger: {implemented: true, tested: false, observed_invocation: ledger_only}
+  export-snapshot: {implemented: false, tested: false, observed_invocation: ledger_only}

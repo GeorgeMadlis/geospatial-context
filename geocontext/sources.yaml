@@ -1,0 +1,79 @@
+version: '0.1'
+status: candidate
+sources:
+- id: DS-0016
+  dataset: ETAK
+  authority: Maa- ja Ruumiamet
+  endpoint: https://gsavalik.envir.ee/geoserver/etak/wfs
+  protocol: WFS
+  layers: [etak:e_501_tee_j, etak:e_502_roobastee_j, etak:e_503_siht_j, etak:e_601_elektriliin_j]
+  historical_verification_utc: null
+  historical_verification_note: '2026-10-24 16:46–16:47 UTC (recorded interval)'
+  lineage: LG-MARU-ETAK
+- id: DS-0017
+  dataset: Metsaregister notices
+  authority: Keskkonnaagentuur
+  endpoint: https://gsavalik.envir.ee/geoserver/metsaregister/wfs
+  protocol: WFS
+  layers: [metsaregister:teatis, metsaregister:teatis_arhiiv]
+  lineage: LG-METSAREGISTER
+- id: DS-0018
+  dataset: Spatial plans
+  authority: Maa- ja Ruumiamet
+  endpoint: https://gsavalik.envir.ee/geoserver/planeeringud/wfs
+  protocol: WFS
+  layers: [planeeringud:rb_planeeringutrass]
+  lineage: LG-PLANNING
+- id: DS-0019
+  dataset: Cadastre
+  authority: Maa- ja Ruumiamet
+  endpoint: https://gsavalik.envir.ee/geoserver/kataster/wfs
+  protocol: WFS
+  layers: [kataster:ky_kehtiv]
+  lineage: LG-CADASTRE
+- id: DS-0020
+  dataset: EHAK
+  authority: Maa- ja Ruumiamet
+  endpoint: https://gsavalik.envir.ee/geoserver/ehak/wfs
+  protocol: WFS
+  layers: [ehak:asustusyksuste_piirid]
+  lineage: LG-EHAK
+- id: DS-0021
+  dataset: Directed restrictions
+  authority: Maa- ja Ruumiamet
+  endpoint: https://gsavalik.envir.ee/geoserver/kitsendus_suunatud/wfs
+  protocol: WFS
+  layers: [kitsendus_suunatud:kpo_avalik_planeering]
+  lineage: LG-PLANNING
+- id: DS-0022
+  dataset: Teeregister
+  authority: Transpordiamet
+  endpoint: https://gis.transpordiamet.ee/arcgis/rest/services/Teeregister/MapServer
+  protocol: ArcGIS REST
+  layers: ['1', '9', '12']
+  lineage: LG-TRANSP
+- id: DS-0023
+  dataset: Orthophotos and metadata
+  authority: Maa- ja Ruumiamet
+  endpoint: https://kaart.maaamet.ee/wms/ajalooline
+  protocol: WMS
+  layers: [of2023mets, of2025aero, metainfo]
+  lineage: LG-MARU-ORTHO
+  additional_endpoints:
+  - https://kaart.maaamet.ee/wms/fotokaart
+  - https://kaart.maaamet.ee/wms/alus
+  - https://geoportaal.maaamet.ee/index.php?lang_id=1&page_id=610
+- id: DS-0024
+  dataset: Map-sheet grids and flight metadata
+  authority: Maa- ja Ruumiamet
+  endpoint: null
+  protocol: unverified
+  layers: []
+  lineage: LG-MARU-ORTHO-META
+- id: DS-0025
+  dataset: Fotoladu oblique imagery
+  authority: Maa- ja Ruumiamet
+  endpoint: null
+  protocol: unverified
+  layers: []
+  lineage: unknown

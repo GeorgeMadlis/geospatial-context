@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geospatial-context"
+version = "0.1.0a0"
+description = "Read-only contextual geospatial evidence utilities"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6", "shapely>=2", "pyproj>=3", "jsonschema>=4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+geocontext = "geocontext.cli:main"
+
+[tool.setuptools.package-data]
+geocontext = ["*.yaml", "schemas/*.json"]
+
+[tool.setuptools.packages.find]
+include = ["geocontext*"]
